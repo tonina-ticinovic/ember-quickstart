@@ -1,3 +1,4 @@
+{{! @ indicates that title will be passed as prop to this component }}
 <h2>{{@title}}</h2>
 
 <ul>
@@ -5,3 +6,6 @@
     <li>{{person}}</li>
   {{/each}}
 </ul>
+
+{{!-- A component's name is derived from its file name. We capitalize the first letter
+and every letter after -, then remove the hyphens. This is known as pascal case. --}}
