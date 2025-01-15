@@ -1,13 +1,15 @@
 {{page-title "Scientists"}}
-<h2>List of Scientists</h2>
+{{!-- <h2>List of Scientists</h2> --}}
 
 
 {{!-- explanation: ember renders block contained inside of {{#each}}...{{/each}} --}}
 {{!-- model is the function from that route --}}
 {{!-- s is an element from array returned from model function --}}
-<ul>
+{{!-- <ul>
   {{#each @model as |s|}}
     <li>{{s}}</li>
   {{/each}}
-</ul>
+</ul> --}}
+
+<PeopleList @people={{@model}} @title="List of Scientists" />
 
