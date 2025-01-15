@@ -7,6 +7,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
+  // route and template names are the same
   this.route('scientists');
-  this.route('programmers');
+  // use programmers template on /progs route
+  this.route('programmers', { path: '/progs' });
 });

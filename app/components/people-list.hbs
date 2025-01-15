@@ -3,9 +3,17 @@
 
 <ul>
   {{#each @people as |person|}}
-    <li>{{person}}</li>
+    <li>
+      {{! to have action connected to this button we should introduce behavior to our template,
+      to do this we add .js file with the same name as template to the same folder }}
+      {{! since showPerson is local method it needs to be referenced with this.showPerson }}
+      {{! when we pass something from parent component, then we use @showPerson and that is like props in React }}
+      <button type="button" {{on "click" (fn this.showPerson person)}}>
+        {{person}}
+      </button>
+    </li>
   {{/each}}
 </ul>
 
-{{!-- A component's name is derived from its file name. We capitalize the first letter
-and every letter after -, then remove the hyphens. This is known as pascal case. --}}
+{{! A component's name is derived from its file name. We capitalize the first letter
+and every letter after -, then remove the hyphens. This is known as pascal case. }}
